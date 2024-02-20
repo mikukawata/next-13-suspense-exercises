@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Kanit } from 'next/font/google';
 
 import SiteHeader from './SiteHeader';
@@ -13,13 +13,13 @@ const primaryFont = Kanit({
 function WebBaseLayout({ children }) {
   return (
     <div
-      className="web-base"
+      className='web-base'
       style={{
-        '--font-family-primary':
-          primaryFont.style.fontFamily,
+        '--font-family-primary': primaryFont.style.fontFamily,
       }}
     >
       <SiteHeader />
+
       <main>{children}</main>
       <SiteFooter />
     </div>
